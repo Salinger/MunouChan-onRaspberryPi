@@ -10,7 +10,7 @@ If you connect Character LCD (compatible HD44780), you can get output on LCD
 
 Dependence:
 Please install these modules.
-  RPI.GPIO
+  RPI.GPIO (If you use LCD)
   simplejson
   MeCab
 
@@ -18,6 +18,9 @@ Please install these modules.
 How to use:
 1. If you run on your PC (not Raspberry Pi),please rewrite line 371 like this.
      ai = MunouChan(display = True) => ai = MunouChan(display = False)
+   And please comment out line 15.
+     import lcd => # import lcd
+   If run on Raspberry Pi with LCD, skip this.
 
 2. Run this command.
 [Without LCD]
